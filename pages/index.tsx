@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Header from "../container/Header";
-import Banner from "../container/Banner.tsx";
+import Banner from "../container/Banner";
+import Services from "../container/Services";
+import NewArrivals from "../container/NewArrivals";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <main>
         <Header />
         <Banner />
+        <Services />
+        <NewArrivals />
       </main>
     </>
   );
