@@ -1,6 +1,8 @@
+import storeItems from "/data/items.json";
 import {
   Box,
   Button,
+  Flex,
   Tab,
   TabList,
   TabPanel,
@@ -8,6 +10,7 @@ import {
   Tabs,
   Text,
 } from "@chakra-ui/react";
+import CardProduct from "../../component/CardProduct";
 
 const NewArrivals = () => {
   return (
@@ -22,8 +25,16 @@ const NewArrivals = () => {
           <Tab as={Button}> Three</Tab>
         </TabList>
         <TabPanels>
-          <TabPanel>1</TabPanel>
-          <TabPanel>3</TabPanel>
+          <TabPanel>
+            <Box>
+              {storeItems.map((item: any) => (
+                <CardProduct {...item} key={item.id} />
+              ))}
+            </Box>
+          </TabPanel>
+          <TabPanel>
+            <CardProduct />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

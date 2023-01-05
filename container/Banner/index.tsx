@@ -21,10 +21,10 @@ const Banner = () => {
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
-            <img src="/img/home3-slide1.jpg" alt="" />
+            <img src="/img/belle1.webp" alt="" />
           </div>
           <div className="keen-slider__slide number-slide2">
-            <img src="/img/home3-slide2.jpg" alt="" />
+            <img src="/img/belle2.webp" alt="" />
           </div>
         </div>
         {/* {loaded && instanceRef.current && (
