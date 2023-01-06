@@ -2,19 +2,18 @@ import {
   Box,
   Button,
   Flex,
-  Input,
   Popover,
   PopoverArrow,
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
   Portal,
-  Select,
-  Stack,
-  Text,
   Wrap,
 } from "@chakra-ui/react";
+import CartList from "../../component/CartList";
 import NextChakraLink from "../../component/NextChakraLink";
+import Search from "../../component/Search";
+import { ShoppingCartIcon } from "../../icons";
 
 const data = [
   {
@@ -42,52 +41,42 @@ const Header = () => {
   return (
     <Wrap p={6}>
       <Flex justifyContent="space-between" width="100%">
-        <Flex alignItems="center" gap={4}>
-          <Box>
-            <img src="./img/logo.png" width="150px" />
-          </Box>
-          <Box>
-            <Text>Call Us</Text>
-            <Text>+91-234-567-8900</Text>
-          </Box>
+        <Box>
+          <img src="./img/logo.png" width="150px" />
+        </Box>
+        <Flex justifyContent="center" width="100%">
+          {data?.map((menu) => (
+            <Popover key={menu.namePage} trigger="hover">
+              <PopoverTrigger>
+                <Button variant="text" fontSize="18px">
+                  {menu.namePage}
+                </Button>
+              </PopoverTrigger>
+              {menu?.menuItem && (
+                <Portal>
+                  <PopoverContent>
+                    <PopoverArrow />
+                    <PopoverBody>
+                      {menu?.menuItem?.map((submenu) => (
+                        <div key={submenu}>
+                          <NextChakraLink href={submenu}>
+                            {submenu}
+                          </NextChakraLink>
+                        </div>
+                      ))}
+                    </PopoverBody>
+                  </PopoverContent>
+                </Portal>
+              )}
+            </Popover>
+          ))}
         </Flex>
-        <Flex alignItems="center">
-          <Stack direction="row" spacing={4}>
-            <Select placeholder="Select option" w="200px">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </Select>
-            <Input placeholder="Basic usage" w="300px" />
-          </Stack>
+        <Flex gap={3}>
+          <Button>Sign Up</Button>
+          <Button>Sign In</Button>
+          <CartList />
+          <Search />
         </Flex>
-      </Flex>
-      <Flex justifyContent="center" width="100%">
-        {data?.map((menu) => (
-          <Popover key={menu.namePage}>
-            <PopoverTrigger>
-              <Button variant="text" fontSize="18px">
-                {menu.namePage}
-              </Button>
-            </PopoverTrigger>
-            {menu?.menuItem && (
-              <Portal>
-                <PopoverContent>
-                  <PopoverArrow />
-                  <PopoverBody>
-                    {menu?.menuItem?.map((submenu) => (
-                      <div key={submenu}>
-                        <NextChakraLink href={submenu}>
-                          {submenu}
-                        </NextChakraLink>
-                      </div>
-                    ))}
-                  </PopoverBody>
-                </PopoverContent>
-              </Portal>
-            )}
-          </Popover>
-        ))}
       </Flex>
     </Wrap>
   );

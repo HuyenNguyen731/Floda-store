@@ -17,7 +17,9 @@ export default function Home() {
       <main>
         <Header />
         <Banner />
+        <br />
         <Services />
+        <br />
         <NewArrivals />
       </main>
     </>
