@@ -9,9 +9,18 @@ import {
   Text,
   Divider,
   Image,
+  Box,
 } from "@chakra-ui/react";
+import { useShoppingCart } from "../../context/shoppingCartContext";
 
 const CardProduct = ({ id, name, price, imgUrl }: any) => {
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+  const quantity = getItemQuantity(id);
   return (
     <Card maxW="sm">
       <CardBody>
@@ -34,14 +43,29 @@ const CardProduct = ({ id, name, price, imgUrl }: any) => {
       </CardBody>
       <Divider />
       <CardFooter>
-        <ButtonGroup spacing="2">
-          <Button variant="solid" colorScheme="blue">
-            Buy now
-          </Button>
-          <Button variant="ghost" colorScheme="blue">
-            Add to cart
-          </Button>
-        </ButtonGroup>
+        {quantity === 0 ? (
+          <ButtonGroup spacing="2">
+            <Button variant="solid" colorScheme="blue">
+              Buy now
+            </Button>
+            <Button variant="ghost" colorScheme="blue" onClick={() => increaseCartQuantity(id)}>
+              Add to cart
+            </Button>
+          </ButtonGroup>
+        ) : (
+          <Box>
+            <ButtonGroup spacing="2">
+              <Button variant="solid" colorScheme="blue"  onClick={() => decreaseCartQuantity(id)}>
+                -
+              </Button>
+              <Button variant="text">{quantity} in cart</Button>
+              <Button variant="ghost" colorScheme="blue" onClick={() => increaseCartQuantity(id)}>
+                +
+              </Button>
+            </ButtonGroup>
+            <Button colorScheme="red"  onClick={() => removeFromCart(id)}>Remove</Button>
+          </Box>
+        )}
       </CardFooter>
     </Card>
   );

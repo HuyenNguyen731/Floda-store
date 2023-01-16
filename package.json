@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.15",
-    "@chakra-ui/react": "^2.4.4",
+    "@chakra-ui/react": "^2.4.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@next/font": "13.0.7",
@@ -19,7 +19,7 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.7",
-    "framer-motion": "^7.10.2",
+    "framer-motion": "^8.4.2",
     "keen-slider": "^6.8.5",
     "next": "13.0.7",
     "react": "18.2.0",
