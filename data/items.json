@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Book",
-    "price": 10.99,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "Camelia Reversible Jacket",
+    "price": 500.0,
+    "imgUrl": "/img/p1.webp"
   },
   {
     "id": 2,
-    "name": "Computer",
-    "price": 11.99,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "Elastic Waist Dress",
+    "price": 700.0,
+    "imgUrl": "/img/p8.webp"
   },
   {
     "id": 3,
-    "name": "Banana",
-    "price": 1.05,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "Cape Dress",
+    "price": 788.0,
+    "imgUrl": "/img/p2.webp"
   },
   {
     "id": 4,
-    "name": "Banana",
-    "price": 1.05,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "Sleeve Kimono Dress",
+    "price": 550.0,
+    "imgUrl": "/img/p3.webp"
   },
   {
     "id": 5,
-    "name": "Book",
-    "price": 10.99,
-    "imgUrl": "/imgs/book.jpg"
+    "name": "Paper Dress",
+    "price": 500.0,
+    "imgUrl": "/img/p4.webp"
   },
   {
     "id": 6,
-    "name": "Computer",
+    "name": "Cape Dress",
     "price": 11.99,
-    "imgUrl": "/imgs/book.jpg"
+    "imgUrl": "/img/p5.webp"
   },
   {
     "id": 7,
-    "name": "Banana",
+    "name": "Sleeve Kimono Dress",
     "price": 1.05,
-    "imgUrl": "/imgs/book.jpg"
+    "imgUrl": "/img/p6.webp"
   },
   {
     "id": 8,
-    "name": "Banana",
+    "name": "Camelia Reversible Jacket",
     "price": 1.05,
-    "imgUrl": "/imgs/book.jpg"
+    "imgUrl": "/img/p7.webp"
   }
 ]

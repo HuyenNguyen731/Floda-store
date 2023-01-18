@@ -15,16 +15,24 @@ import CardProduct from "../../component/CardProduct";
 const NewArrivals = () => {
   return (
     <Box>
+      <br />
       <Box textAlign="center">
-        <Text>NEW ARRIVALS</Text>
+        <Text fontSize={"18px"}>NEW ARRIVALS</Text>
         <Text>Browse the huge variety of our products</Text>
       </Box>
       <br />
+      <br />
       <Tabs isFitted variant="unstyled" defaultIndex={1}>
         <TabList width={300} alignItems="center" m="0 auto" gap={4}>
-          <Tab as={Button}>Man</Tab>
-          <Tab as={Button}>Women</Tab>
-          <Tab as={Button}>Other</Tab>
+          <Tab as={Button} bg="transparent">
+            Man
+          </Tab>
+          <Tab as={Button} bg="transparent">
+            Women
+          </Tab>
+          <Tab as={Button} bg="transparent">
+            Other
+          </Tab>
         </TabList>
         <TabPanels>
           <TabPanel>

@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { Box, Text } from "@chakra-ui/react";
+import ImageSlider from "../../component/ImageSlider";
+
+const listImg = [
+  {
+    id: "1",
+    src: "/img/belle1.webp",
+    title: "SHOP OUR NEW COLLECTION",
+    subTitle: "FROM HIGHT TO LOW, CLASSIC OR MODERN. WE HAVE YOU COVERED",
+  },
+  {
+    id: "2",
+    src: "/img/belle2.webp",
+    title: "SUMMER BIKINI COLLECTION",
+    subTitle: "THE POWERFUL THEME YOU CAN TRUST",
+  },
+];
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,14 +37,17 @@ const Banner = () => {
     <>
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">
-            <img src="/img/belle1.webp" alt="" />
-          </div>
-          <div className="keen-slider__slide number-slide2">
-            <img src="/img/belle2.webp" alt="" />
-          </div>
+          {listImg?.map((item) => (
+            <div className="keen-slider__slide" key={item.id}>
+              <ImageSlider
+                src={item.src}
+                title={item.title}
+                subTitle={item.subTitle}
+              />
+            </div>
+          ))}
         </div>
-        {/* {loaded && instanceRef.current && (
+        {loaded && instanceRef.current && (
           <>
             <Arrow
               left
@@ -47,25 +67,8 @@ const Banner = () => {
               }
             />
           </>
-        )} */}
+        )}
       </div>
-      {/* {loaded && instanceRef.current && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx);
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            );
-          })}
-        </div>
-      )} */}
     </>
   );
 };
@@ -74,6 +77,7 @@ function Arrow(props: any) {
   const disabeld = props.disabled ? " arrow--disabled" : "";
   return (
     <svg
+      fontSize={"20px"}
       onClick={props.onClick}
       className={`arrow ${
         props.left ? "arrow--left" : "arrow--right"

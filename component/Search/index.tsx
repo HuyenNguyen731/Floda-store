@@ -23,7 +23,13 @@ const Search = () => {
 
   return (
     <Box>
-      <Button colorScheme="teal" onClick={onOpen} variant="text" fontSize="xl">
+      <Button
+        colorScheme="teal"
+        onClick={onOpen}
+        variant="text"
+        fontSize="xl"
+        _hover={{ opacity: 0.6 }}
+      >
         <SearchIcon />
       </Button>
       <Drawer isOpen={isOpen} placement="top" onClose={onClose}>

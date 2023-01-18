@@ -23,21 +23,12 @@ const CardProduct = ({ id, name, price, imgUrl }: any) => {
   const quantity = getItemQuantity(id);
   return (
     <Card maxW="sm">
-      <CardBody>
-        <Image
-          src={imgUrl}
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-        />
-        <Stack mt="6" spacing="3">
-          <Heading size="md">{name}</Heading>
-          <Text>
-            This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
-          </Text>
-          <Text color="blue.600" fontSize="2xl">
-            {price}
+      <CardBody p={0}>
+        <Image src={imgUrl} alt="Green double couch with wooden legs" />
+        <Stack mt="6" spacing="3" textAlign="center">
+          <Text fontSize="16px">{name}</Text>
+          <Text color="red.300" fontSize="20px">
+            ${price}
           </Text>
         </Stack>
       </CardBody>
@@ -48,22 +39,36 @@ const CardProduct = ({ id, name, price, imgUrl }: any) => {
             <Button variant="solid" colorScheme="blue">
               Buy now
             </Button>
-            <Button variant="ghost" colorScheme="blue" onClick={() => increaseCartQuantity(id)}>
+            <Button
+              variant="ghost"
+              colorScheme="blue"
+              onClick={() => increaseCartQuantity(id)}
+            >
               Add to cart
             </Button>
           </ButtonGroup>
         ) : (
           <Box>
             <ButtonGroup spacing="2">
-              <Button variant="solid" colorScheme="blue"  onClick={() => decreaseCartQuantity(id)}>
+              <Button
+                variant="solid"
+                colorScheme="blue"
+                onClick={() => decreaseCartQuantity(id)}
+              >
                 -
               </Button>
               <Button variant="text">{quantity} in cart</Button>
-              <Button variant="ghost" colorScheme="blue" onClick={() => increaseCartQuantity(id)}>
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                onClick={() => increaseCartQuantity(id)}
+              >
                 +
               </Button>
             </ButtonGroup>
-            <Button colorScheme="red"  onClick={() => removeFromCart(id)}>Remove</Button>
+            <Button colorScheme="red" onClick={() => removeFromCart(id)}>
+              Remove
+            </Button>
           </Box>
         )}
       </CardFooter>

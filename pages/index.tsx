@@ -18,9 +18,9 @@ export default function Home() {
         <Header />
         <Banner />
         <br />
-        <Services />
-        <br />
         <NewArrivals />
+        <br />
+        <Services />
       </main>
     </>
   );
