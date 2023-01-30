@@ -27,7 +27,7 @@ const CardProduct = ({ id, name, price, imgUrl }: any) => {
         <Image src={imgUrl} alt="Green double couch with wooden legs" />
         <Stack mt="6" spacing="3" textAlign="center">
           <Text fontSize="16px">{name}</Text>
-          <Text color="red.300" fontSize="20px">
+          <Text color="red.300" fontSize="18px">
             ${price}
           </Text>
         </Stack>
