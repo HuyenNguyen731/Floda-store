@@ -1,8 +1,6 @@
-import storeItems from "/data/items.json";
 import {
   Box,
   Button,
-  SimpleGrid,
   Tab,
   TabList,
   TabPanel,
@@ -11,6 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import CardProduct from "../../component/CardProduct";
+import ProductSlider from "../../component/ProductSlider";
 
 const NewArrivals = () => {
   return (
@@ -36,11 +35,7 @@ const NewArrivals = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <SimpleGrid columns={4} gap={6} p="0 40px">
-              {storeItems.map((item: any) => (
-                <CardProduct {...item} key={item.id} />
-              ))}
-            </SimpleGrid>
+            <ProductSlider />
           </TabPanel>
           <TabPanel>
             <CardProduct />

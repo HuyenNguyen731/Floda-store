@@ -4,6 +4,8 @@ import Header from "../container/Header";
 import Banner from "../container/Banner";
 import Services from "../container/Services";
 import NewArrivals from "../container/NewArrivals";
+import PopularCategories from "../container/PopularCategories";
+import ListBrand from "../container/ListBrand";
 
 export default function Home() {
   return (
@@ -19,6 +21,10 @@ export default function Home() {
         <Banner />
         <br />
         <NewArrivals />
+        <br />
+        <PopularCategories />
+        <br />
+        <ListBrand />
         <br />
         <Services />
       </main>
