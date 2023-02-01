@@ -42,7 +42,7 @@ const PopularCategories = () => {
     loop: true,
     slides: {
       perView: 5,
-      spacing: 0,
+      spacing: 15,
     },
   });
 
@@ -50,7 +50,11 @@ const PopularCategories = () => {
     <div>
       <div ref={sliderRef} className="keen-slider">
         {data.map((item: any) => (
-          <div className="keen-slider__slide" key={item.id}>
+          <div
+            className="keen-slider__slide"
+            key={item.id}
+            style={{ height: "auto" }}
+          >
             <CardCategory {...item} key={item.id} />
           </div>
         ))}

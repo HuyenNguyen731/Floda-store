@@ -9,7 +9,7 @@ type ImageSliderProp = {
 const ImageSlider = ({ src, title, subTitle }: ImageSliderProp) => {
   return (
     <Box>
-      <img src={src} alt="" />
+      <img src={src} alt="" width="100%" />
       <Box
         pos="absolute"
         top={0}

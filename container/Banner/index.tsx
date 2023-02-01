@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { Box, Text } from "@chakra-ui/react";
 import ImageSlider from "../../component/ImageSlider";
 
 const listImg = [

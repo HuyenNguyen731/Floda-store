@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { useCallback, useEffect, useState } from "react";
 import CartList from "../../component/CartList";
+import SubMenu from "../../component/Header/SubMenu";
 import NextChakraLink from "../../component/NextChakraLink";
 import Search from "../../component/Search";
 import { ShoppingCartIcon } from "../../icons";
@@ -120,11 +121,13 @@ const Header = () => {
         zIndex={1}
       >
         <Box>
-          <img src="./img/logo.avif" width="150px" />
+          <NextChakraLink href="/">
+            <img src="./img/logo.avif" width="150px" />
+          </NextChakraLink>
         </Box>
         <Flex justifyContent="center" width="100%">
           {data?.map((menu) => (
-            <Popover key={menu.namePage} trigger="hover">
+            <Popover key={menu.namePage} trigger="click">
               <PopoverTrigger>
                 <Button
                   variant="text"

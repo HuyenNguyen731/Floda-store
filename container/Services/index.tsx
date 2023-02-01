@@ -1,4 +1,5 @@
-import { Flex, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import SubMenu from "../../component/Header/SubMenu";
 import ServiceItem from "../../component/ServiceItem";
 
 const data = [
@@ -26,11 +27,18 @@ const data = [
 
 const Services = () => {
   return (
-    <SimpleGrid columns={4} spacing={0}>
-      {data?.map((item) => (
-        <ServiceItem key={item.heading} info={item} />
-      ))}
-    </SimpleGrid>
+    <>
+      <SimpleGrid columns={4} spacing={0}>
+        {data?.map((item) => (
+          <ServiceItem key={item.heading} info={item} />
+        ))}
+      </SimpleGrid>
+      <br />
+      <br />
+      <SubMenu />
+      <br />
+      <br />
+    </>
   );
 };
 
