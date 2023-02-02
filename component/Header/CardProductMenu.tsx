@@ -1,7 +1,6 @@
-import { Box, Button, Card, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import NextChakraLink from "../NextChakraLink";
+import { Box, Card, Flex, Image, Link, Spacer, Text } from "@chakra-ui/react";
 
-const CartProductMenu = () => {
+const CardProductMenu = () => {
   return (
     <Card p={4} border="1px solid #efefef">
       <Flex gap={4}>
@@ -20,18 +19,13 @@ const CartProductMenu = () => {
             <Text fontSize="sm">App-based simlation for Mckinsey PSG</Text>
           </Box>
           <Spacer />
-          <NextChakraLink
-            href="/"
-            as={Button}
-            fontSize="sm"
-            fontWeight="semibold"
-          >
+          <Link href="/" fontSize="sm" fontWeight="semibold">
             See more
-          </NextChakraLink>
+          </Link>
         </Flex>
       </Flex>
     </Card>
   );
 };
 
-export default CartProductMenu;
+export default CardProductMenu;

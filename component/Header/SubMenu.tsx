@@ -1,3 +1,4 @@
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import {
   Box,
   Tab,
@@ -7,73 +8,32 @@ import {
   Tabs,
   Flex,
   Text,
-  Divider,
-  Center,
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import CartProductMenu from "./CartProductMenu";
+import CardProductMenu from "./CardProductMenu";
 
-const data = [
-  {
-    id: 1,
-    name: "tab 1",
-    products: ["product 1 tab 1", "product 2 tab 1"],
-    content: [
-      {
-        id: 11,
-        name: "Ultimate Program ",
-        products: [
-          "McKinsey PSG Simulation 1",
-          "Case Interview End-to-End 1",
-          "BCG Casey Simulation 1",
-        ],
-        content: [],
-      },
-      {
-        id: 12,
-        name: "Case Interview Program 1",
-        products: ["Ultimate Management Consulting Program 1"],
-      },
-      {
-        id: 13,
-        name: "MBB Tests",
-        products: [, "Case Interview End-to-End 1", "BCG Casey Simulation 1"],
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "tab 2",
-    products: ["product 1 tab 2", "product 2 tab 2"],
-    content: [
-      {
-        id: 21,
-        name: "Deductive Reasoning",
-        products: ["Aptitude Tests Package 2"],
-      },
-      {
-        id: 22,
-        name: "Inductive Reasoning",
-        products: ["Numerical Reasoning Test 2"],
-      },
-      ,
-    ],
-  },
-];
-
-const SubMenu = () => {
+const SubMenu = ({ data }: any) => {
   const [state, setSate] = useState<Number | null>(1);
-  const menuParents = data?.flatMap((c) => c) || [];
-  const menuChildren = data?.flatMap((c) => c.content) || [];
+  const menuParents = data?.flatMap((c: any) => c) || [];
+  const menuChildren = data?.flatMap((c: any) => c.content) || [];
   const allItemMenu = menuParents.concat(menuChildren);
 
   return (
-    <Box>
+    <Box bg="#EAECF0" borderRadius={2}>
       <Flex>
-        <Tabs>
+        <Tabs
+          bg="white"
+          border="1px solid #ddd"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            borderTopLeftRadius: 10,
+            borderBottomLeftRadius: 10,
+          }}
+        >
           <TabList>
-            {data?.map((item) => (
+            {data?.map((item: any) => (
               <Tab
                 key={item.id}
                 onClick={() => {
@@ -84,12 +44,13 @@ const SubMenu = () => {
               </Tab>
             ))}
           </TabList>
-          <TabPanels>
-            {data?.map((item) => (
+          <TabPanels style={{ flex: 1 }}>
+            {data?.map((item: any) => (
               <>
-                {item.content.map((sub, index) => (
-                  <TabPanel key={sub?.id}>
+                {item.content.map((sub: any) => (
+                  <TabPanel key={sub?.id} p={0}>
                     <Button
+                      color={state === sub?.id ? "blue.500" : "black"}
                       variant="text"
                       onClick={() => {
                         setSate(sub?.id as number);
@@ -102,19 +63,26 @@ const SubMenu = () => {
               </>
             ))}
           </TabPanels>
+          <Box borderTop="1px solid #ddd" textAlign="center">
+            <Button
+              variant="link"
+              color="blue.500"
+              p={4}
+              rightIcon={<ArrowForwardIcon />}
+            >
+              See all products
+            </Button>
+          </Box>
         </Tabs>
-        <Center height="200px" padding="0 20px">
-          <Divider orientation="vertical" />
-        </Center>
-        <Box>
+        <Box p={2}>
           {allItemMenu.map(
-            (item) =>
+            (item: any) =>
               item.id === state && (
                 <Box key={item.id}>
-                  {item.products.map((i) => (
+                  {item.products.map((i: any) => (
                     <>
                       <Text key={i}>{i}</Text>
-                      <CartProductMenu />
+                      <CardProductMenu />
                     </>
                   ))}
                 </Box>

@@ -14,6 +14,7 @@ import {
   useDisclosure,
   Text,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 import NextChakraLink from "../NextChakraLink";
@@ -49,19 +50,18 @@ const Search = () => {
 
             <Flex p="20px 0" gap={2}>
               <Text>Popular Searches:</Text>
-
-              <NextChakraLink href="" textDecoration="underline">
+              <Link href="" textDecoration="underline">
                 Jean
-              </NextChakraLink>
-              <NextChakraLink href="" textDecoration="underline">
+              </Link>
+              <Link href="" textDecoration="underline">
                 Dress
-              </NextChakraLink>
-              <NextChakraLink href="" textDecoration="underline">
+              </Link>
+              <Link href="" textDecoration="underline">
                 Ring
-              </NextChakraLink>
-              <NextChakraLink href="" textDecoration="underline">
+              </Link>
+              <Link href="" textDecoration="underline">
                 Necklac
-              </NextChakraLink>
+              </Link>
             </Flex>
           </DrawerBody>
         </DrawerContent>
