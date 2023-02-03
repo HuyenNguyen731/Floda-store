@@ -6,6 +6,7 @@ import Services from "../container/Services";
 import NewArrivals from "../container/NewArrivals";
 import PopularCategories from "../container/PopularCategories";
 import ListBrand from "../container/ListBrand";
+import Footer from "../container/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <ListBrand />
         <br />
         <Services />
+        <Footer />
       </main>
     </>
   );

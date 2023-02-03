@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Footer from "../Footer";
 
 const Header = dynamic(() => import("../Header"), { ssr: false });
 
@@ -12,6 +13,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 };

@@ -35,9 +35,6 @@ const Services = () => {
       </SimpleGrid>
       <br />
       <br />
-      <SubMenu />
-      <br />
-      <br />
     </>
   );
 };
