@@ -26,7 +26,7 @@ const CardProduct = ({ id, name, price, imgUrl }: any) => {
         <Image
           src={imgUrl}
           alt="Green double couch with wooden legs"
-          height={300}
+          // height={300}
           width="100%"
           objectFit="contain"
           bg="#ececec"

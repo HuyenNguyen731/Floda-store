@@ -113,38 +113,83 @@
 
     {
       "categoryId": 300,
-      "id": 9,
+      "id": 14,
       "name": "Paper Dress",
       "price": 500.0,
       "imgUrl": "/img/o1.webp"
     },
     {
       "categoryId": 300,
-      "id": 10,
+      "id": 15,
       "name": "Cape Dress",
       "price": 11.99,
       "imgUrl": "/img/o2.webp"
     },
     {
       "categoryId": 300,
-      "id": 11,
+      "id": 16,
       "name": "Sleeve Kimono Dress",
       "price": 1.05,
       "imgUrl": "/img/o3.webp"
     },
     {
       "categoryId": 300,
-      "id": 12,
+      "id": 17,
       "name": "Camelia Reversible Jacket",
       "price": 1.05,
       "imgUrl": "/img/o4.webp"
     },
     {
       "categoryId": 300,
-      "id": 13,
+      "id": 18,
       "name": "Camelia Reversible Jacket",
       "price": 1.05,
       "imgUrl": "/img/o4.webp"
+    }
+  ],
+
+  "collection": [
+    {
+      "categoryId": 100,
+      "id": 1,
+      "name": "Camelia Reversible Jacket",
+      "price": 500.0,
+      "imgUrl": "/img/p1.webp"
+    },
+    {
+      "categoryId": 100,
+      "id": 2,
+      "name": "Elastic Waist Dress",
+      "price": 700.0,
+      "imgUrl": "/img/p8.webp"
+    },
+    {
+      "categoryId": 100,
+      "id": 3,
+      "name": "Cape Dress",
+      "price": 788.0,
+      "imgUrl": "/img/p2.webp"
+    },
+    {
+      "categoryId": 100,
+      "id": 4,
+      "name": "Sleeve Kimono Dress",
+      "price": 550.0,
+      "imgUrl": "/img/p3.webp"
+    },
+    {
+      "categoryId": 100,
+      "id": 5,
+      "name": "Paper Dress",
+      "price": 500.0,
+      "imgUrl": "/img/p4.webp"
+    },
+    {
+      "categoryId": 100,
+      "id": 6,
+      "name": "Cape Dress",
+      "price": 11.99,
+      "imgUrl": "/img/p5.webp"
     }
   ]
 }

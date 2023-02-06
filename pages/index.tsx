@@ -7,6 +7,8 @@ import NewArrivals from "../container/NewArrivals";
 import PopularCategories from "../container/PopularCategories";
 import ListBrand from "../container/ListBrand";
 import Footer from "../container/Footer";
+import Collection from "../container/Collection";
+import LastestBlog from "../container/LastestBlog";
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
         <PopularCategories />
         <br />
         <ListBrand />
+        <br />
+        <Collection />
+        <br />
+        <LastestBlog />
         <br />
         <Services />
         <Footer />
